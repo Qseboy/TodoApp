@@ -1,7 +1,19 @@
 import TodoItem from 'components/TodoItem/TodoItem';
 import { TodoListUl, TodoListUlWrapper } from './todoList.styled';
 
-export default function TodoList({ taskList, removeTasks, handleChecked }) {
+type TaskItem = {
+  id: string,
+  name: string,
+  checked: boolean,
+};
+
+type TaskListProps = {
+  taskList: TaskItem[],
+  removeTasks: (id: string) => void,
+  handleChecked: (id: string) => void,
+};
+
+export default function TodoList({ taskList, removeTasks, handleChecked }: TaskListProps) {
   return (
     <TodoListUlWrapper>
       <TodoListUl>

@@ -1,7 +1,11 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const TodoListLi = styled.li(
+type TodoListLiProps = {
+  checked: boolean
+}
+
+export const TodoListLi = styled.li<TodoListLiProps>(
   props =>
     css`
       display: flex;

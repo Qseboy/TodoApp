@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
   TodoFormWrapper,
   TodoFormInput,
@@ -6,14 +6,18 @@ import {
   TodoFormButton,
 } from './todoForm.styled';
 
-export default function TodoForm({ handleForm }) {
-  const [name, setName] = useState('');
+type TodoFormProps = {
+ handleForm: (name: string) => void
+}
 
-  const handleChange = event => {
+export default function TodoForm({ handleForm }: TodoFormProps) {
+  const [name, setName] = useState<string>('');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setName(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     handleForm(name);
     setName('');
