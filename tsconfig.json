@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es6",         /* Версия ECMAScript для компиляции */
+    "module": "CommonJS",      /* Система модулей (ESNext для использования import/export) */
+    "strict": true,          /* Включение строгого режима */
+    "jsx": "react-jsx",      /* Тип JSX - react-jsx или react-jsxdev */
+    "esModuleInterop": true, /* Включение интероперабельности ES Modules */
+    "skipLibCheck": true,    /* Пропуск проверки типов во внешних библиотеках */
+    "forceConsistentCasingInFileNames": true, /* Сравнение регистра имен файлов */
+    // "resolveJsonModule": true, /* Поддержка импорта JSON как модулей */
+    "isolatedModules": true, /* Компиляция в изолированные модули */
+     "moduleResolution": "nodenext",
+
+    /* Другие параметры конфигурации могут быть добавлены согласно вашим потребностям */
+
+    "lib": ["dom", "dom.iterable", "esnext"], /* Добавление библиотек для компиляции */
+
+    /* Пути к файлам, если вы используете алиасы (в зависимости от вашей структуры) */
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

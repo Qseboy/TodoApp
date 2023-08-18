@@ -8,7 +8,6 @@ export const TodoListUlWrapper = styled.div`
   margin-top: 20px;
 `;
 export const TodoListUl = styled.ul`
-  /* width: 75%; */
   min-width: 75%;
   list-style: none;
   padding: 0px;
